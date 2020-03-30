@@ -1,0 +1,12 @@
+
+
+
+
+
+
+
+
+
+
+
+ program to count the number of times a character appears in a File. [Note :  The character check is case insensitive... i.e, 'a' and 'A' are considered to be the same]Sample Input and Output:Enter the file nameInput.txtEnter the character to be countedrFile 'Input.txt' has 99 instances of letter 'r'.*/
