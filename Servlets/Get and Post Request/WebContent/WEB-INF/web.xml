@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Get and Post Request</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>GetPost1</display-name>
+    <servlet-name>GetPost1</servlet-name>
+    <servlet-class>GetPost.GetPost1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPost1</servlet-name>
+    <url-pattern>/GetPost1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetPost2</display-name>
+    <servlet-name>GetPost2</servlet-name>
+    <servlet-class>GetPost.GetPost2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPost2</servlet-name>
+    <url-pattern>/GetPost2</url-pattern>
+  </servlet-mapping>
+</web-app>
