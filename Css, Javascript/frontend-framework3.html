@@ -1,0 +1,39 @@
+<!-- Create a table of food contents with its calorie value. 
+Display the rows of food contents with calories 
+<=300 in light green background, 
+301 to 700 in light blue,
+700 - 1200 in light orange
+>1200 in light red. (Hint: use table table-striped )-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frontend Framework</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<table class="table table-striped table-bordered">
+		<tr>
+			<th>Food Contents</th>
+			<th>Calories</th>
+		</tr>
+		<tr class="success">
+			<td>A01</td>
+			<td><=300</td>
+		</tr>
+		<tr class="info">
+			<td>A02</td>
+			<td>301 to 700</td>
+		</tr>
+		<tr class="warning">
+			<td>A03</td>
+			<td>700 to 1200</td>
+		</tr>
+		<tr class="danger">
+			<td>A04</td>
+			<td> >1200</td>
+		</tr>
+	</table>
+
+</body>
+</html>

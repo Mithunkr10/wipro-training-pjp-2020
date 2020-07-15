@@ -1,0 +1,23 @@
+<!--Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+<script type="text/javascript">
+	function convertstring(n)
+	{
+		var x=n.split(' ');
+		var a=[];
+		var y=x.length;
+		for(var i=0;i<y;i++)
+		{
+			a.push(x[i].charAt(0).toUpperCase()+x[i].slice(1));
+		}
+	document.write(a.join(' '));
+	}
+	convertstring("hi hello");
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- Write a validation function to check a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS regular Expression</title>
+	<script type="text/javascript">
+		function checkpswd(){
+			var p=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+			var x=document.password.pswd.value;
+			if(x.match(p))
+				alert("Correct password format.");
+			else
+				alert("Enter the password in the following fomat:\n a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter");
+		}
+	</script>
+</head>
+<body>
+<form name="password" onsubmit="return checkpswd()">
+	Password:<input type="password" name="pswd"><br>
+	<input type="submit" value="Submit"><br>
+</form>
+</body>
+</html>

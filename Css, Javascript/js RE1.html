@@ -1,0 +1,49 @@
+<!--	
+ Write validation functions and modify the onSubmit event Handler in the form code to validate the following form fields:
+1. Member number
+• Must be entered
+• Must be a number
+2. Password
+• Must be entered
+• Must be longer than 4 characters
+If an error occurs, use an alert box to display an error message for the first field in error and place the cursor in the first field in error.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS regular Expression</title>
+	<script type="text/javascript">
+		function checkfrm()
+		{
+			var x=document.card.num.value;
+			var y=document.card.pswd.value;
+			
+			if (x==null||x==""||y==null||y=="")
+			{	
+				alert("Please Enter valid input.");
+				return false;
+			}
+			if(!x.match(/[0-9]+/))
+			{
+				alert("Please Enter member number as input.");
+				return false;
+			}
+			if(y.length<4)
+			{
+				alert("Password length should be more than 4");
+				return false;
+			}
+			else
+				alert("Successful login!!");
+		}
+		
+		
+	</script>
+</head>
+<body>
+<form name="card" onsubmit="return checkfrm()">
+	Memeber number:<input type="text" name="num"><br>
+	Password:<input type="password" name="pswd"><br>
+	<input type="submit" value="Submit" >
+</form>
+</body>
+</html>

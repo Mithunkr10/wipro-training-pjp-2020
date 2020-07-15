@@ -1,0 +1,30 @@
+<!--  Create program to display current time in a textbox (HH:MM:SS) such that the value in the time textbox is dynamic (Time should get updated every second) and not static.
+[Hint: Use setTimeOut function]-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS objects</title>
+</head>
+<body>
+
+		Time:<input type="textbox" id="time" name="time" value="">
+	<script type="text/javascript">
+	function curtime(){
+		var t=new Date();
+		var h=t.getHours();
+		var m=t.getMinutes();
+		var s=t.getSeconds();
+		m=check(m);
+		s=check(s);
+		document.getElementById("time").value=h+':'+m+':'+s;
+		var ta=setTimeout(curtime,1000);
+	}
+	function check(a)
+	{
+		if(a<10) a='0'+a;
+		return a;
+	}
+curtime();
+</script>
+</body>
+</html>

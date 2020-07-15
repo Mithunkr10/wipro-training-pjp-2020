@@ -1,0 +1,35 @@
+<!--	
+ Write a JavaScript program which will
+a. give an alert message of today’s date.
+b. prompt the user to give their name and gives an alert message ‘Hello’ and username.
+c. prompt the user to give 2 numbers and alerts the sum of those 2 numbers.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function curdate(){
+			today=new Date();
+			var d=today.getDate();
+			var m=today.getMonth()+1;
+			var y=today.getFullYear();
+			if(d<10) d='0'+d;
+			if(m<10) m='0'+m;
+			var r=d+'/'+m+'/'+y;
+			return r;
+		}
+
+		window.alert("Date:"+curdate());
+		var name=prompt("Please Enter your name:");
+		if(name!=null)
+			window.alert("Hello "+name);
+
+		var a=Number(prompt("Enter 1st number:"));
+		var b=Number(prompt("Enter 2nd number:"));
+		alert(a+b);
+	</script>
+
+</body>
+</html>
