@@ -1,0 +1,69 @@
+<!--Apply the HTML 5 attributes in the Hands-on Assignment 2 and 3 on Forms 
+Sample Attributes : email, placeholder, required, multiple.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visitors information</title>
+	<style type="text/css">
+		div{
+text-align: center;
+position:relative;
+left:450px;
+top:100px;
+border : 2px solid green;
+width : 500px;
+height: 250px;
+border-radius:20px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<br>
+	<form>
+		<table>
+			<tr><th colspan="3">Visitors Information</th></tr>
+		<tr><td>E-mail</td><td><input type="email" placeholder="Enter email"  name="email" required="multiple"><br></td></tr>
+		<tr><td>Interset</td><td><input type="Checkbox" name="research">Research
+		<input type="Checkbox" name="purchase">Purchase<br></td>
+		<tr><td><label for="Occupation">Occupation</label></td>
+
+<td><select name="Occupation" id="Occupation">
+  <option value="select one">Select One</option>
+  <option value="student">Student</option>
+  <option value="teacher">Teacher</option>
+</select><br></td></tr>
+<tr><td>Want us to send you junk emails?<br></td>
+<td><input type="radio" id="yes" name="email" value="Aboslutely">
+  <label for="email">Absolutely</label><br></td>
+<td><input type="radio" id="no" name="email" value="no way">
+  <label for="email">No way man</label><br></td>
+</tr></table></form></div></body></html>
+
+<div>
+	<br>
+<form name="logindetails">
+
+<br>
+<table align="center">
+<tr><td>Name</td><td><input type="text" name="name"></td></tr>
+<tr><td>Username</td><td><input type="text" name="uname"></td></tr>
+<tr><td>Password</td><td><input type="password" name="pwd" placeholder="Password" required="multiple"></td></tr>
+<tr><td>Confirm Password</td><td><input type="password" name="pwd" placeholder="Password" required="multiple"></td></tr>
+<tr><td>Gender</td><td><input type="radio" id="male" name="gender" value="Male">
+  <label for="gender">Male</label><br></td>
+  <td><input type="radio" id="female" name="gender" value="Female">
+  <label for="gender">Female</label><br></td>
+  <td><input type="radio" id="Other" name="gender" value="Other">
+  <label for="gender">Other</label><br></td></tr>
+ <tr><td>Addresss</td><td> <textarea name="address" rows="2" cols="20"></textarea></td></tr> 
+ <tr><td><label for="Occupation">Profession</label></td>
+<td><select name="Occupation" id="Occupation">
+  <option value="select one">Select One</option>
+  <option value="student">Student</option>
+  <option value="teacher">Teacher</option>
+<select><br></td></tr>
+<!--<tr><td colspan="2" align="center"><input type="submit" value="Login" onclick="return loginvalidation()" /></td></tr>-->
+</tr></table></form></div></body></html>
+</body>
+</html>

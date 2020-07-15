@@ -1,0 +1,48 @@
+<!-- Write a HTML program to create visitor information capture. The page should have the heading “Visitors information” and should ask the following information from the user : 
+• Email address using a textbox , 
+• User’s interest web for research or purchase as check box.
+• Occupation as  drop down box and preselected value should be given as (select one).
+• Check “want us to send you junk emails?” and the options given are “absolutely” and “no way man” using the radio button. 
+• A horizontal line divides the heading and the body content. Once all the inputs are given, the user should be able to submit or reset. 
+• This whole form should be tabulated using table tag.  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visitors information</title>
+	<style type="text/css">
+		div{
+text-align: center;
+position:relative;
+left:450px;
+top:200px;
+border : 2px solid green;
+width : 500px;
+height: 200px;
+border-radius:20px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<br>
+	<form>
+		<table>
+			<tr><th colspan="3">Visitors Information</th></tr>
+		<tr><td>E-mail</td><td><input type="textbox" name="email"><br></td></tr>
+		<tr><td>Interset</td><td><input type="Checkbox" name="research">Research
+		<input type="Checkbox" name="purchase">Purchase<br></td>
+		<tr><td><label for="Occupation">Occupation</label></td>
+
+<td><select name="Occupation" id="Occupation">
+  <option value="select one">Select One</option>
+  <option value="student">Student</option>
+  <option value="teacher">Teacher</option>
+</select><br></td></tr>
+<tr><td>Want us to send you junk emails?<br></td>
+<td><input type="radio" id="yes" name="email" value="Aboslutely">
+  <label for="email">Absolutely</label><br></td>
+<td><input type="radio" id="no" name="email" value="no way">
+  <label for="email">No way man</label><br></td>
+</tr></table></form></div></body></html>
+</body>
+</html>

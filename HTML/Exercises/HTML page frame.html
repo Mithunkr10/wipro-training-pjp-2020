@@ -1,0 +1,27 @@
+<!--Write a HTML program to display the HTML page as described below:
+• Create a page which is divided in 3 parts. 30% horizontally on top and the rest 70 % bellow is split vertically in 2 parts again 30 % and 70% each
+• The Top header frame should display an image
+• Left side below frame should have a menu of “Font” and “Alignment”. 
+• If we click on “Font” link a different page which contains 5 different fonts with font’s names should be shown on the RHS
+• If we click on “Alignment” link a different page which contains a different alignment type should be shown on the RHS frame.
+• For this create 2 webpages named Font and Alignment.
+• Font page should have 5 names of different fonts displayed like this
+                               Agency FB
+                              Cambria
+                              Elephant 
+• Alignment page should have sample text aligned to different alignments -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frames</title>
+</head>
+<body>
+<FRAMESET ROWS="30%,70%">
+	<frame src="D:\Others\84546.jpg" name="Image">
+	<FRAMESET COLS="30%,70%">
+		<FRAME SRC="font.html" name="font">
+		<FRAME src="Alignment.html" name="Alignment">
+	</FRAMESET>
+</FRAMESET>
+</body>
+</html>
