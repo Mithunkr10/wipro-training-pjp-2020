@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Online Auction</title>
+<style>
+
+div.p{
+background-color:"yellow";
+text-align:"center";
+padding-left:50px;
+}
+</style>
+</head>
+<body >
+<script>
+function validate()
+{
+	var itemid=document.getElementById("item_id");
+	var uname=document.getElementById("uname");
+	var email=document.getElementById("email_id");
+	var itemname=document.getElementById("item_name");
+	var bidamt=document.getElementById("bid_amt");
+	var incamt=document.getElementById("aibm");
+	var error=document.getElementById("error");
+	if(itemid=="" || uname=="" || email=="" || itemname=="" || bidamt=="" || !(incamt.checked)){
+		error.style.color="red"
+		error.textContent = "Requied Data Missing!Enter and Resubmit."
+		return false;
+	}
+	else
+		{
+		error.textContent=""
+	return true;
+	}}
+</script>
+
+<form method="get" action="Collectinformation" onsubmit="validate()">
+<div class="p" align="center" style="background-color:lightpink;">
+<h1 align="center">Welcome to AP Auction. Please Enter Bid.</h1>
+<span id="error"></span>
+<table>
+<tr>
+<td>Item ID:</td>
+<td><input type="text" name="item_id" id="item_id" required></td>
+</tr>
+<tr>
+<td>Item Name:</td>
+<td><input type="text" name="item_name" id="item_name" required></td>
+</tr>
+<tr>
+<td>Your Name:</td>
+<td><input type="text" name="uname" id="uname" required></td>
+</tr>
+<tr>
+<td>Email ID:</td>
+<td><input type="text" name="email_id" id="email_id" required></td>
+</tr>
+<tr>
+<td>Bid Amount:</td>
+<td><input type="text" name="bid_amt" id="bid_amt" required></td>
+</tr>
+<tr>
+<td colspan="2">Auto-increment Bid to match other Bider's<input type="checkbox" name="autoincrement" id="aibm" value="autoincrement" required></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Submit" name="submit" onclick="validate()"></td>
+</tr>
+</table>
+<br>
+</div>
+</form>
+</body>
+</html>

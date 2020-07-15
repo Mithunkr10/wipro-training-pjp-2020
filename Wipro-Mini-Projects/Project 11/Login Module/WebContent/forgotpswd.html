@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change password</title>
+<style>
+
+div.p{
+border: 2px solid #73AD21;
+border-radius:round;
+margin:auto;
+width:50%;
+padding:10pt;
+}
+
+</style>
+<script>
+function validate(){
+	var error=document.getElementById("error");
+	if(document.getElementById("npswd")==document.getElementById("rnpswd"))
+		return true;
+	else
+		{error.style.color="red"
+		error.textContent = "Password does not match."
+		return false;
+}
+}
+</script>
+</head>
+<body>
+<h3 align="center">Change password</h3>
+<div class="p" align="center">
+<form method="post" action="Changepswd" onsubmit="validate()">
+<table>
+<tr>
+<td>User-name:</td><td> <input type="text" name="uname" id="uname" required></td>
+</tr>
+<tr>
+<td>Old Password:</td><td> <input type="password" name="pswd" id="pswd" required></td>
+</tr>
+<tr>
+<td>New Password:</td><td> <input type="password" name="npswd" id="npswd" required></td>
+</tr>
+<tr>
+<td>Retype New Password:</td><td> <input type="password" name="rnpswd" id="rnpswd" required></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" name="Submit" id="submit" value="Submit"></td>
+</tr>
+<tr>
+<tr>
+<td><a href="login.html">User Login</a></td>
+<td><a href="newuser.html">   New User</a></td>
+</tr>
+</table>
+<span id="error"></span>
+</form>
+</div>
+</body>
+</html>

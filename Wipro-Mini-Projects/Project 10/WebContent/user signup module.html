@@ -1,0 +1,80 @@
+<!--USER SIGNUP MODULE-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>USER Registration</title>
+<link rel="stylesheet" type="text/css" href="formstyling.css">	
+<script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+	<input class="time" type="textbox" id="time" name="time" value="">
+	<script type="text/javascript">
+		setTimeout(function() { alert("3 minutes have passed."); },3*60*1000);
+	function curtime(){
+		var t=new Date();
+		var h=t.getHours();
+		var m=t.getMinutes();
+		var s=t.getSeconds();
+		m=check(m);
+		s=check(s);
+		document.getElementById("time").value=h+':'+m+':'+s;
+		var ta=setTimeout(curtime,1000);
+	}
+	function check(a)
+	{
+		if(a<10) a='0'+a;
+		return a;
+	}
+curtime();
+
+</script>
+	<div>
+		<form name="reg" class="a" onsubmit="validateform()" >
+			<table>
+				<tr>
+					<th colspan="2">USER REGISTRATION</th>
+				</tr>
+				<tr>
+					<td>First-Name:</td>
+					<td><input type="text" name="fname" id="fname" required="required"></td>
+				</tr>
+				<tr>
+					<td>Last-Name:</td>
+					<td><input type="text" name="lname" id="lname" required="required"></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="pswd" id="pswd" required="required"></td>
+				</tr>
+				<tr>
+					<td>Confirm Password:</td>
+					<td><input type="password" name="cpswd" id="cpswd" required="required"></td>
+				</tr>
+				<tr>
+					<td rowspan="1">Gender</td>
+					<td >
+						<input type="radio" id="male" name="gender" value="male" required="required"><label for="male">Male</label><br>
+						<input type="radio" id="female" name="gender" value="female"><label for="femal">Female</label><br>
+						<input type="radio" id="other" name="gender" value="other"><label for="other">Others</label><br></td>
+				</tr>
+				<tr>
+					<td>Mobile number:</td>
+					<td><input type="text" name="num" id="num" required="required"></td>
+				</tr>
+				<tr>
+					<td>DOB:</td>
+					<td><input type="text" id=dob name="dob" required="required"></td>
+				</tr>
+				<tr>
+					<td>E-Mail ID:</td>
+					<td><input type="text" id=email name="email" required="required"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><input type="submit" id=sumbit name="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>

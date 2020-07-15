@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New User Registration</title>
+<style>
+
+div.p{
+border: 2px solid #73AD21;
+border-radius:round;
+margin:auto;
+width:50%;
+padding:10pt;
+}
+
+</style>
+<script>
+function validate(){
+	var error=document.getElementById("error");
+	if(document.getElementById("pswd")==document.getElementById("rnpswd"))
+		return true;
+	else
+		{error.style.color="red"
+		error.textContent = "Password does not match."
+		return false;
+}
+}
+</script>
+</head>
+<body>
+<h3 align="center">Enter New User Details</h3>
+<div class="p" align="center">
+<form action="Newuser" method="post" onsubmit="validate()">
+<table>
+<tr>
+<td>User-name:</td><td> <input type="text" name="uname" id="uname" required></td>
+</tr>
+<tr>
+<td>Password:</td><td> <input type="password" name="pswd" id="pswd" required></td>
+</tr>
+<tr>
+<td>Retype Password:</td><td> <input type="password" name="rnpswd" id="rnpswd" required></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" name="" id="submit" value="Add User"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><a href="login.html">User Login</a></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

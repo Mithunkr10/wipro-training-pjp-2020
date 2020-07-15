@@ -1,0 +1,27 @@
+/* CSS file for user signup module */
+.time{
+	position: absolute;
+  top: 1px;
+  right: 4pt;
+  font-size: 18px;
+}
+		div{
+
+			margin-left: 420pt;
+			margin-top: 150pt;
+			height: 220pt;
+			width: 250pt;
+			border-radius: 2px;
+
+		}
+		body{
+			background-color: purple;
+		}
+		input:hover{
+			color: white;
+			background-color: grey;
+
+		}
+		form.a{
+			background-color: gray;
+		}
