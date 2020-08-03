@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration 
+PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wipro.bean.Employee1" table="emp">
+<id name="id" column="id" type="int" >
+<generator class="native"></generator>
+</id>
+<property name="name" column="name" type="string" not-null="true"></property>
+<property name="desg" column="desg" type="string" not-null="true"></property>
+<property name="sal" column="sal" type="java.lang.Double" not-null="true"></property>
+</class>
+</hibernate-mapping>

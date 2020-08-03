@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration 
+PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wipro.bean.Flower" table="flower">
+<id name="FlowerID" column="FlowerID" type="string" >
+<generator class="assigned"></generator>
+</id>
+<property name="FlowerName" column="FlowerName" type="string" not-null="true"></property>
+<property name="Color" column="Color" type="string" not-null="true"></property>
+<property name="Price" column="Price" type="float" not-null="true"></property>
+</class>
+</hibernate-mapping>
