@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+<session-factory>
+    <!-- Oracle Dialect -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <!-- Database Connection Settings -->
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3305/wipro</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">ROOT</property>
+    <!-- To echo / show all executed queries on server output -->
+    <property name="hibernate.show_sql">true</property>
+    <!-- Used to Create or Alter Table  -->
+    <!-- Given class structure not present in the database persist / save - insert
+    update - update
+    delete - delete 
+    get / load - select record by ID (primary key) 
+       <property name="hibernate.hbm2ddl.auto">update</property> -->    
+
+    <property name="hibernate.enable_lazy_load_no_trans">true</property>
+    <!-- Mapping file entry
+    <mapping resource="HQL1.hbm.xml"/> 
+    <mapping resource="HQL2.hbm.xml"/> 	
+    <mapping resource="HQL3.hbm.xml"/>
+    <mapping resource="HQL4.hbm.xml"/>
+    <mapping resource="HQL5.hbm.xml"/>-->
+    <mapping resource="HQL6.hbm.xml"/> 
+
+</session-factory>
+</hibernate-configuration>

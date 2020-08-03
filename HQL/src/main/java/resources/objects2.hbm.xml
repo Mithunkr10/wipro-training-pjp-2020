@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.wipro.bean.Objects2" table="flower">
+<id name="FlowerID" column="FlowerID" type="int" >
+<generator class="native"></generator>
+</id>
+<property name="FlowerName" column="FlowerName" type="string" not-null="true"></property>
+<property name="Color" column="Color" type="string" not-null="true"></property>
+<property name="Price" column="Price" type="double" not-null="true"></property>
+</class>
+</hibernate-mapping>

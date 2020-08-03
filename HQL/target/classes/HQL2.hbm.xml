@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.wipro.bean.HQL2" table="car_details">
+<id name="ID" column="ID" type="int" >
+<generator class="native"></generator>
+</id>
+<property name="RegNo" column="RegNo" type="string" not-null="true"></property>
+<property name="Model" column="Model" type="string" not-null="true"></property>
+<property name="Color" column="Color" type="string" not-null="true"></property>
+<property name="Manufacturer" column="Manufacturer" type="string" not-null="true"></property>
+</class>
+</hibernate-mapping>
