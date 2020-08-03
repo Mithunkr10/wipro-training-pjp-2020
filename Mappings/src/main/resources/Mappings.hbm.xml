@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<!-- <class name="com.wipro.bean.Mappings1" table="CarOwner">
+<id name="OwnerId" column="OwnerID" type="int" >
+<generator class="native"/>
+</id>
+<property name="OwnerName" column="OwnerName" type="string" not-null="true"/>
+</class>
+
+  <class name="com.wipro.bean.Mappings3" table="Continent">
+<id name="cId" column="cID" type="int" >
+<generator class="native"/>
+</id>
+<map name="countries" cascade="all">
+<key column="Id"/>
+<index column = "countries" type = "string"/>
+<one-to-many class="Countries"/>
+</map>
+<property name="cname" column="ContinentName" type="string" not-null="true"/>
+</class>
+
+  <class name="com.wipro.bean.Countries" table="Country">
+<id name="cId" column="cID" type="int" >
+<generator class="native"/>
+</id>
+<property name="countryname" column="countryname" type="string" not-null="true"/>
+<property name="capital" column="capital" type="string" not-null="true"/>
+</class>
+
+<class name="com.wipro.bean.Mappings2" table="Owner">
+	<id name="OwnerId" column="OwnerID" type="int" >
+		<generator class="native"/>
+	</id>
+	<list name="cars" cascade="all">
+		<key column="Id"/>
+		<one-to-many class="MultiCarOwner"/>
+	</list>
+
+<property name="OwnerName" column="OwnerName" type="string" not-null="true"/>
+</class>
+
+<class name="com.wipro.bean.MultiCarOwner" table="MultiCarOwner">
+	<id name="OwnerID" column="OwnerID" type="int" >
+		<generator class="native"/>
+	</id>
+
+<property name="RegNo" column="RegNo" type="string" not-null="true"/>
+<property name="CarName" column="CarName" type="string" not-null="true"/>
+<property name="Color" column="Color" type="string" not-null="true"/>
+<property name="Manufacturer" column="Manufacturer" type="string" not-null="true"/>
+</class>
+
+<class name="com.wipro.bean.Mappings4" table="Employee">
+	<id name="EmployeeId" column="EmployeeID" type="int">
+	<generator class="native"/>
+	</id>
+	<property name="EmployeeName" column="EmployeeName" type="string"/>
+</class>
+
+
+<class name="com.wipro.bean.Passport" table="Passport">
+	<id name="EmployeeId" column="EmployeeID" type="int">
+	<generator class="native"/>
+	</id>
+	<property name="PassportNumber" column="PassportNo" type="string"/>
+		<property name="Validity" column="ValidTill" type="string"/>
+</class>
+-->
+
+ <class name = "com.wipro.bean.Mappings5" table = "EMPLOYEE">
+      
+      <meta attribute = "class-description">
+         This class contains the employee detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "firstName" column = "first_name" type = "string"/>
+      <property name = "lastName" column = "last_name" type = "string"/>
+      <property name = "salary" column = "salary" type = "int"/>
+      <many-to-one name = "address" column = "address" unique="true" 
+         class="Address" not-null="true"/>
+         
+   </class>
+
+   <class name = "com.wipro.bean.Address" table="ADDRESS">
+      
+      <meta attribute = "class-description">
+         This class contains the address detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "street" column = "street_name" type = "string"/>
+      <property name = "city" column = "city_name" type = "string"/>
+      <property name = "state" column = "state_name" type = "string"/>
+      <property name = "zipcode" column = "zipcode" type = "string"/>
+      
+   </class>
+</hibernate-mapping>
